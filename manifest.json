@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "What Can You Do With",
+    "version": "1.0",
+    "description": "A tool to find the use cases of concrete nouns.",
+    "permissions": [
+      "activeTab",
+      "contextMenus"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
