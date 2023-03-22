@@ -1,11 +1,10 @@
 [
-    {
-      "noun": "tomato",
-      "uses": "Soup"
-    },
-    {
-      "noun": "car",
-      "uses": "You can drive a car."
-    }
-  ]
-  
+  {
+    "noun": "tomato",
+    "uses": [
+      "Soup",
+      "Salad",
+      "Sauce"
+    ]
+  }
+]
