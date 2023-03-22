@@ -1,28 +1,29 @@
 // Wait until the DOM content is loaded before executing the code
 document.addEventListener('DOMContentLoaded', function() {
-  // Get references to the search UI elements
+  // Get references to the popup.html UI elements
   const searchInput = document.getElementById('search');
   const searchButton = document.getElementById('searchButton');
   const resultsDiv = document.getElementById('results');
   
-  // Get the search query from the URL parameter
+  // Get the text from the search box
   const urlParams = new URLSearchParams(window.location.search);
   const searchQuery = urlParams.get('search');
   
-  // If there's a search query in the URL, set it as the value of the search input and perform the search
+  // If there's text in searchbox input, set it as the value of the search input and perform the search
   if (searchQuery) {
   searchInput.value = searchQuery;
   search();
   }
   
-  // Add an event listener to the search button to perform the search
+  // Add an event listener to the search button
   searchButton.addEventListener('click', search);
   
-  // Perform the search when the user clicks the search button or presses enter
+  // Perform the search when the user clicks the search button
+  // **** NEED TO ADD PRESSING ENTER FUNCTIONALITY
   async function search() {
   console.log('Search button clicked');
   try {
-    // Get the search text and convert it to lowercase for case-insensitive search
+    // Get the search text and convert it to lowercase
     const searchText = searchInput.value.toLowerCase();
     // Get the link to the database JSON file
     const databaseLink = chrome.runtime.getURL('database.json');
